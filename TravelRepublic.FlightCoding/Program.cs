@@ -13,8 +13,8 @@ namespace TravelRepublic.FlightCoding
             //TODO: Loading Provider Type from config
             provider = new FlightBuilder();
             //TODO: Loading criteria default Attributes from config
-            //FlightSearchCriteria criteria = new FlightSearchCriteria();
-            //provider.FlightSearchCriteria = criteria;
+            FlightSearchCriteria criteria = new FlightSearchCriteria();
+            provider.FlightSearchCriteria = criteria;
             IEnumerable<Flight> fs = provider.GetFlights(FlightFilters.IsValid,FlightFilters.IsCurrent,FlightFilters.IsGroundTimeLessThan2Hours);
             foreach (Flight f in fs)
             {
